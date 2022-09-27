@@ -5,16 +5,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Isaac's Website</title>
+	<title>Isaac's Resume</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="resume.css">
+    <link rel="stylesheet" href="header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="pageLoadBox"></div>
+    <div class="header">
+        <a href="index.html">
+            <img class="icon" src="images/IFiconShadow.svg" alt=""></div>
+        </a>
+    </div>
     <div class="page-title">
         <h1>Resume</h1>
     </div>
@@ -69,15 +74,15 @@
                     <div class="skills-small">C#</div>
                     <div class="skills-small">Assembly</div>
                 </div>
-                <p>My main languages of choice are C++, Python and JavaScript. However I'm a fast learner and can adapt to any language/environment desired. W3Schools is my saving grace!</p>
-                <p>Currently studying: C++, JavaScript</p>
+                <p>My main language is C++. However I'm a fast learner and can adapt to any language/environment desired. W3Schools is my saving grace!</p>
+                <p>Currently studying: C++, JavaScript, Python</p>
             </div>
         </li>
         <li>
             <div class="timeline-entry">
                 <h2>Projects</h2>
                 <div class="degree-container">
-                    <div class="project">Portfolio Website</div>
+                    <a target="_blank" class="project" href="https://github.com/ifowl/My-Website">Portfolio Website</a>
                     <p style="margin-left: 30px;">You're looking at it! This site was built from scratch in VS Code. It has advanced my experience in web design and JavaScript. On top of the
                         minimalistic design and animations, I implemented the libraries DayJS and ScrollMagic to make the website pop.</p>
                     <div class="project-skills">HTML</div>
@@ -85,7 +90,14 @@
                     <div class="project-skills">JavaScript</div>
                 </div>
                 <div class="degree-container">
-                    <div class="project">Bookstore Database Website</div>
+                    <a target="_blank" class="project" href="https://github.com/ifowl/CS3-Programming-Patterns">C++ Programming Patterns</a>
+                    <p style="margin-left: 30px;">This is a collection of projects I've done through KSU to learn data structures, programming patterns, dynamic memory, STL, and much more.
+                        These have developed my foundation in computer science and taught me fundamental structures such as stacks, heaps, trees, templates, lists, vectors, and IOstream.</p>
+                    <div class="project-skills">C++</div>
+                    <div class="project-skills">STL</div>
+                </div>
+                <div class="degree-container">
+                    <a target="_blank" class="project" href="https://github.com/ifowl/LibraryDatabase">Bookstore Database Website</a>
                     <p style="margin-left: 30px;">This project demonstrates my relational database skills and helped me learn SQL and PHP. It features a search functionality, shopping cart, checkout, 
                         and staff login. SQL applications include queries, insertions, views, deletions, procedures, and injection protection.</p>
                     <div class="project-skills">MariaDB</div>
@@ -132,13 +144,13 @@
         </li>
         <li style="margin-top: 125px;">
             <div class="timeline-entry">
-                <div class="download"><img src="images/download-symbol.svg" alt="">Download (PDF)</div>
+                <a href="Downloads/IsaacFowlerResume.pdf" class="download" download><img src="images/download-symbol.svg" alt="">Download (PDF)</a>
             </div>
         </li>
         </ul>
     </div>
 </body>
-<script type="text/javascript" src="resume.js"></script>
-<script type="text/javascript" src="animationDelay.js"></script>
+<script type="text/javascript" src="JS/resume.js"></script>
+<script type="text/javascript" src="JS/animationDelay.js"></script>
 
 </html>

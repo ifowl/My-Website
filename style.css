@@ -21,6 +21,20 @@ Just add "animation: transitionIN 1.5s;" to the class.
     }
 }
 
+@keyframes dropIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-100px);
+    }
+    50% {
+        opacity: 0;
+        transform: scale(0.95) translateY(-100px);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 @keyframes fadeOut {
     from {
         transform: scale(1);
@@ -66,16 +80,36 @@ Just add "animation: transitionIN 1.5s;" to the class.
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
+.full-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.main-container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+    margin-top: auto;
+}
 
 .main {
-    /*border: 20px black solid;*/
+    /* border: 2px black solid; */
     max-width: 900px;
     margin: auto;
     text-align:center;
-    margin-top: 250px;
     justify-content: center;
     user-select: none;
     animation: fadeIn 1s ease-in-out;
+}
+
+.smallspace {
+    margin-top: 5%;
+}
+.bigspace {
+    margin-top: 250px;
 }
 
 .page-title {
@@ -90,20 +124,31 @@ Just add "animation: transitionIN 1.5s;" to the class.
 }
 
 .in-progress {
+    margin: auto;
     display: flex;
     user-select: none;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    animation: fadeIn 1s ease-in-out;
 }
+
 .in-progress-entry {
-    width: 100%;
+    min-width: 350px;
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     border-radius: 10px;
     padding: 20px 0px 20px 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+
 .in-progress-entry p li {
     font-size: 1.1em;
 }
@@ -144,6 +189,9 @@ Just add "animation: transitionIN 1.5s;" to the class.
     box-shadow: 25px 25px 30px #888888; 
 }
 */
+.skills-box {
+    justify-content: center;
+}
 
 .container {
     width: 100%;
@@ -191,7 +239,7 @@ a {
 
 body {
     margin: 0;
-    height: 100%;
+    /*height: 100%; */
     /* background-image: radial-gradient(white, #c4ffff); */
     border: 1px solid transparent;
     /* animation: pageLoad 5s; */
@@ -199,11 +247,18 @@ body {
 
 .links-box {
     margin-top: 40px;
-    /*border: 10px black solid;*/
+    /* border: 5px black solid; */
+    display: flex;
+    justify-content: center;
+    /* width: auto; */
+    flex-wrap: wrap;
+}
+
+.double-arrow {
     display: flex;
     justify-content: center;
     width: auto;
-    flex-wrap: wrap;
+    animation: dropIn 2s cubic-bezier(0.165, 0.84, 0.44, 1);;
 }
 
 .circle-link {
@@ -226,13 +281,18 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
+.circle-link h4 {
+    font-size: 1.8em;
+    text-align: center;
+}
+
 .circle-link.ready:hover {
     transform: scale(1.2);
     box-shadow: 25px 25px 30px #888888;
 }
 
 .pageLoadBox {
-    height: 2500px;
+    height: 3800px;
     width: 2500px;
     background-color: white;
     position: fixed;
@@ -240,6 +300,84 @@ body {
     animation: pageLoad 5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
     z-index: 1;
 }
+
+.aboutme-pic {
+    width: 250px;
+    border: 5px solid orangered;
+    border-radius: 25px;
+}
+
+.email {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+.email input[name="email"] {
+    width: 400px;
+    height: 40px;
+    font-size: 1.5em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 5px;
+    border: 1px solid gray;
+    transition: 0.5s;
+}
+
+.email input[name="email"]:focus {
+    background: gainsboro;
+    outline-color: grey;
+    outline-width: 0;
+    transform: scale(1.02);
+}
+
+.email textarea[name="message"] {
+    width: 1000px;
+    height: 200px;
+    font-size: 1.5em;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 5px;
+    border: 1px solid gray;
+    transition: 0.5s;
+    resize: none;
+}
+
+.email textarea[name="message"]:focus {
+    background: gainsboro;
+    outline-color: grey;
+    outline-width: 0;
+    transform: scale(1.01);
+}
+
+.email-part {
+    padding-bottom: 50px;
+}
+
+.email form input[name="submit"] {
+    background-color: orangered;
+    color: white;
+    border: 0;
+    width: 200px;
+    height: 50px;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: 3px 3px 4px 4px #2e2e2e;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+}
+
+.email form input[name="submit"]:hover {
+    transform: scale(1.2);
+    box-shadow: 25px 25px 30px #888888; 
+}
+
+
 
 /*
 h1, h2 {
